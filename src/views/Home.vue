@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <apexchart width="1000" type="bar" :options="options" :series="series"></apexchart>
+    <apexchart align = "center" width="1000" type="bar" :options="options" :series="series"></apexchart>
   </div>
 
 </template>

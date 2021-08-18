@@ -76,28 +76,28 @@ export default {
       this.angularForks = response.data.forks;
       this.angularWatchers = response.data.watchers;
       this.angularStars = response.data.stargazers_count;
-      this.series = [{}, { data: [this.angularForks, this.angularStars, this.angularStars] }];
+      this.series = [{}, { name: "Angular", data: [this.angularForks, this.angularStars, this.angularStars] }];
     });
     axios.get("https://api.github.com/repos/emberjs/ember.js").then((response) => {
       console.log(response.data);
       this.emberForks = response.data.forks;
       this.emberWatchers = response.data.watchers;
       this.emberStars = response.data.stargazers_count;
-      this.series = [{}, {}, { data: [this.emberForks, this.emberStars, this.emberStars] }];
+      this.series = [{}, {}, { name: "Ember", data: [this.emberForks, this.emberStars, this.emberStars] }];
     });
     axios.get("https://api.github.com/repos/sveltejs/svelte").then((response) => {
       console.log(response.data);
       this.svelteForks = response.data.forks;
       this.svelteWatchers = response.data.watchers;
       this.svelteStars = response.data.stargazers_count;
-      this.series = [{}, {}, {}, { data: [this.svelteForks, this.svelteStars, this.svelteStars] }];
+      this.series = [{}, {}, {}, { name: "Svelte", data: [this.svelteForks, this.svelteStars, this.svelteStars] }];
     });
     axios.get("https://api.github.com/repos/facebook/react").then((response) => {
       console.log(response.data);
       this.reactForks = response.data.forks;
       this.reactWatchers = response.data.watchers;
       this.reactStars = response.data.stargazers_count;
-      this.series = [{}, {}, {}, {}, { data: [this.reactForks, this.reactStars, this.reactStars] }];
+      this.series = [{}, {}, {}, {}, { name: "React", data: [this.reactForks, this.reactStars, this.reactStars] }];
     });
   },
   methods: {},
